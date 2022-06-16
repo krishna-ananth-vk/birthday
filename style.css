@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: rgb(134, 101, 101);
+    font-family: 'Bebas Neue', cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+
+
+}
+
+.invitation {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffc2be;
+    padding: 5%;
+    text-align: center;
+}
+
+.title {
+    font-size: calc(((100vw - 15px) - (100vh - 64px)) * 0.0585366);
+    margin: 10px 10px 30px 10px;
+    animation: slideUp 1s cubic-bezier(0.18, 0.89, 0.32, 1.1) 0.5s forwards;
+}
+
+.subtitle {
+    line-height: 1.2;
+    font-size: calc(10.5px + 75vw / 960 * 12);
+    margin: 10px 10px 30px 10px;
+    animation: slideUp 1s cubic-bezier(0.18, 0.89, 0.32, 1.1) 0.6s forwards;
+
+}
+
+.date {
+    text-align: center;
+    text-decoration: underline;
+    line-height: 30px;
+    margin: 10px 10px 30px 10px;
+    animation: slideUp 1s cubic-bezier(0.18, 0.89, 0.32, 1.1) 0.7s forwards;
+
+
+}
+
+.location {
+    letter-spacing: 0.3rem;
+    word-spacing: 0.4rem;
+    margin: 10px 10px 30px 10px;
+    animation: slideUp 1s cubic-bezier(0.18, 0.89, 0.32, 1.1) 0.8s forwards;
+
+
+}
+
+
+
+.compliment {
+    margin: 72px 10px 30px 10px;
+}
+
+.image {
+    /* width: 100vh; */
+    /* height: 100vh;
+    background-image: url('baby.jpg');
+    background-repeat: round;
+    background-size: cover; */
+    object-fit: cover;
+
+}
+
+img,
+video {
+    object-fit: cover;
+    width: 100vh;
+    backdrop-filter: blur(100px);
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+    .container {
+        /* display: flex; */
+        flex-direction: column-reverse;
+        display: block;
+
+        /* height: 100vh; */
+    }
+
+    .invitation {
+        /* margin-top: 250px; */
+        animation: slideUpFrame 2s cubic-bezier(0.18, 0.89, 0.32, 1.1) 2s forwards;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .title {
+        font-size: calc(10vw);
+    }
+
+    .subtitle {
+        font-size: calc(5vw);
+    }
+
+    .date {
+        font-size: calc(4vw);
+
+    }
+
+    .location {
+        letter-spacing: 0.1rem;
+    }
+
+    .big {
+        display: none;
+    }
+
+    .image {
+        width: 100vw;
+        /* height: ; */
+        height: 70vh;
+        /* position: fixed; */
+    }
+
+    img,
+    video {
+        width: 100vw;
+        /* height: ; */
+        height: 70vh;
+        position: fixed;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(32px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+
+
+    }
+}
+
+@keyframes slideUpFrame {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-256px);
+    }
+
+    100% {
+        transform: translateY(0px);
+
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    * {
+        overflow: hidden;
+    }
+
+    .small {
+        display: none;
+    }
+}
